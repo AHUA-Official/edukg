@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.EntityMapper">
+
+    <sql id="Base_Column_List">
+        id,entity,type,tag,description,source,score,status,parent_id,alias,apeartime,verification
+    </sql>
+
+    <select id="selectAll" resultType="com.example.entity.Entity">
+        select
+        <include refid="Base_Column_List" />
+        from entity
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="entity != null"> and entity like concat('%', #{entity}, '%')</if>
+            <if test="type != null"> and type like concat('%', #{type}, '%')</if>
+            <if test="tag != null"> and tag like concat('%', #{tag}, '%')</if>
+            <if test="description != null"> and description like concat('%', #{description}, '%')</if>
+            <if test="source != null"> and source like concat('%', #{source}, '%')</if>
+            <if test="score != null"> and score = #{score}</if>
+            <if test="status != null"> and status like concat('%', #{status}, '%')</if>
+            <if test="parentId != null"> and parent_id = #{parentId}</if>
+            <if test="alias != null"> and alias like concat('%', #{alias}, '%')</if>
+            <if test="apeartime != null"> and apeartime = #{apeartime}</if>
+            <if test="verification != null"> and verification like concat('%', #{verification}, '%')</if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.Entity">
+        select
+        <include refid="Base_Column_List" />
+        from entity
+        where id = #{id}
+    </select>
+
+    <select id="selectByEntity" resultType="com.example.entity.Entity">
+        select
+        <include refid="Base_Column_List" />
+        from entity
+        where entity = #{entity}
+    </select>
+    <delete id="deleteById">
+        delete from entity
+        where  id = #{id}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.entity.Entity" useGeneratedKeys="true" keyProperty="id">
+        insert into entity
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="entity != null">entity,</if>
+            <if test="type != null">type,</if>
+            <if test="tag != null">tag,</if>
+            <if test="description != null">description,</if>
+            <if test="source != null">source,</if>
+            <if test="score != null">score,</if>
+            <if test="status != null">status,</if>
+            <if test="parentId != null">parent_id,</if>
+            <if test="alias != null">alias,</if>
+            <if test="apeartime != null">apeartime,</if>
+            <if test="verification != null">verification,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="entity != null">#{entity},</if>
+            <if test="type != null">#{type},</if>
+            <if test="tag != null">#{tag},</if>
+            <if test="description != null">#{description},</if>
+            <if test="source != null">#{source},</if>
+            <if test="score != null">#{score},</if>
+            <if test="status != null">#{status},</if>
+            <if test="parentId != null">#{parentId},</if>
+            <if test="alias != null">#{alias},</if>
+            <if test="apeartime != null">#{apeartime},</if>
+            <if test="verification != null">#{verification},</if>
+        </trim>
+    </insert>
+    <insert id="insertwithname" parameterType="com.example.entity.Entity" useGeneratedKeys="true" keyProperty="id">
+        <!-- 假设数据库中的id列是自增的，所以不需要在插入语句中包含它 -->
+        insert into entity (
+        entity, type, tag, description, source, score, status, parent_id, alias, apeartime, verification
+        )
+        values (
+        #{entity}, #{type}, #{tag}, #{description}, #{source}, #{score}, #{status}, #{parentId}, #{alias}, #{apeartime}, #{verification}
+        )
+    </insert>
+    <update id="updateById" parameterType="com.example.entity.Entity">
+        update entity
+        <set>
+            <if test="entity != null">
+                entity = #{entity},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="tag != null">
+                tag = #{tag},
+            </if>
+            <if test="description != null">
+                description = #{description},
+            </if>
+            <if test="source != null">
+                source = #{source},
+            </if>
+            <if test="score != null">
+                score = #{score},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId},
+            </if>
+            <if test="alias != null">
+                alias = #{alias},
+            </if>
+            <if test="apeartime != null">
+                apeartime = #{apeartime},
+            </if>
+            <if test="verification != null">
+                verification = #{verification},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+</mapper>

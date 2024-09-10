@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.AcquireanswerMapper">
+
+    <sql id="Base_Column_List">
+        id,questiontext,prompt,agent,asktime,genestatus,answer,tag,parentid,context,satisfaction,attachment
+    </sql>
+
+    <select id="selectAll" resultType="com.example.entity.Acquireanswer">
+        select
+        <include refid="Base_Column_List" />
+        from acquireanswer
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="questiontext != null"> and questiontext like concat('%', #{questiontext}, '%')</if>
+            <if test="prompt != null"> and prompt like concat('%', #{prompt}, '%')</if>
+            <if test="agent != null"> and agent like concat('%', #{agent}, '%')</if>
+            <if test="asktime != null"> and asktime = #{asktime}</if>
+            <if test="genestatus != null"> and genestatus = #{genestatus}</if>
+            <if test="answer != null"> and answer like concat('%', #{answer}, '%')</if>
+            <if test="tag != null"> and tag like concat('%', #{tag}, '%')</if>
+            <if test="parentid != null"> and parentid = #{parentid}</if>
+            <if test="context != null"> and context like concat('%', #{context}, '%')</if>
+            <if test="satisfaction != null"> and satisfaction = #{satisfaction}</if>
+            <if test="attachment != null"> and attachment like concat('%', #{attachment}, '%')</if>
+        </where>
+        order by id desc
+    </select>
+    <select id="selectBygenstatus" resultType="com.example.entity.Acquireanswer">
+        select
+        <include refid="Base_Column_List" />
+        from acquireanswer
+        <where>
+            genestatus = 0
+        </where>
+        order by id desc
+        LIMIT 5
+    </select>
+    <select id="selectBygenstatus33" resultType="com.example.entity.Acquireanswer">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM
+        acquireanswer
+        WHERE
+        genestatus = 0
+        ORDER BY id DESC
+        LIMIT 5
+    </select>
+    <select id="selectById" resultType="com.example.entity.Acquireanswer">
+        select
+        <include refid="Base_Column_List" />
+        from acquireanswer
+        where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from acquireanswer
+        where  id = #{id}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.entity.Acquireanswer" useGeneratedKeys="true" keyProperty="id">
+        insert into acquireanswer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="questiontext != null">questiontext,</if>
+            <if test="prompt != null">prompt,</if>
+            <if test="agent != null">agent,</if>
+            <if test="asktime != null">asktime,</if>
+            <if test="genestatus != null">genestatus,</if>
+            <if test="answer != null">answer,</if>
+            <if test="tag != null">tag,</if>
+            <if test="parentid != null">parentid,</if>
+            <if test="context != null">context,</if>
+            <if test="satisfaction != null">satisfaction,</if>
+            <if test="attachment != null">attachment,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="questiontext != null">#{questiontext},</if>
+            <if test="prompt != null">#{prompt},</if>
+            <if test="agent != null">#{agent},</if>
+            <if test="asktime != null">#{asktime},</if>
+            <if test="genestatus != null">#{genestatus},</if>
+            <if test="answer != null">#{answer},</if>
+            <if test="tag != null">#{tag},</if>
+            <if test="parentid != null">#{parentid},</if>
+            <if test="context != null">#{context},</if>
+            <if test="satisfaction != null">#{satisfaction},</if>
+            <if test="attachment != null">#{attachment},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" parameterType="com.example.entity.Acquireanswer">
+        update acquireanswer
+        <set>
+            <if test="questiontext != null">
+                questiontext = #{questiontext},
+            </if>
+            <if test="prompt != null">
+                prompt = #{prompt},
+            </if>
+            <if test="agent != null">
+                agent = #{agent},
+            </if>
+            <if test="asktime != null">
+                asktime = #{asktime},
+            </if>
+            <if test="genestatus != null">
+                genestatus = #{genestatus},
+            </if>
+            <if test="answer != null">
+                answer = #{answer},
+            </if>
+            <if test="tag != null">
+                tag = #{tag},
+            </if>
+            <if test="parentid != null">
+                parentid = #{parentid},
+            </if>
+            <if test="context != null">
+                context = #{context},
+            </if>
+            <if test="satisfaction != null">
+                satisfaction = #{satisfaction},
+            </if>
+            <if test="attachment != null">
+                attachment = #{attachment},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+</mapper>

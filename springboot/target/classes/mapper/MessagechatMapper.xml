@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.MessagechatMapper">
+
+    <select id="selectAll" resultType="com.example.entity.Messagechat">
+        select `messagechat`.*, `student`.`username` as studentid from `messagechat`
+		left join `student` on `messagechat`.`student_id` = `student`.id
+
+        <where>
+			<if test="studentId != null">
+				and `messagechat`.`student_id` = #{studentId}
+			</if>
+
+        </where>
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.Messagechat">
+        select * from messagechat where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from messagechat where  id = #{id}
+    </delete>
+
+</mapper>

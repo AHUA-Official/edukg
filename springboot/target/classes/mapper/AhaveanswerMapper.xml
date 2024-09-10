@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.AhaveanswerMapper">
+
+    <sql id="Base_Column_List">
+        id,questiontext,prompt,agent,asktime,genestatus,answertime,answer,tag,parentid,context,satisfaction,attachment
+    </sql>
+
+    <select id="selectAll" resultType="com.example.entity.Ahaveanswer">
+        select
+        <include refid="Base_Column_List" />
+        from ahaveanswer
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="questiontext != null"> and questiontext like concat('%', #{questiontext}, '%')</if>
+            <if test="prompt != null"> and prompt like concat('%', #{prompt}, '%')</if>
+            <if test="agent != null"> and agent like concat('%', #{agent}, '%')</if>
+            <if test="asktime != null"> and asktime = #{asktime}</if>
+            <if test="genestatus != null"> and genestatus = #{genestatus}</if>
+            <if test="answertime != null"> and answertime = #{answertime}</if>
+            <if test="answer != null"> and answer like concat('%', #{answer}, '%')</if>
+            <if test="tag != null"> and tag like concat('%', #{tag}, '%')</if>
+            <if test="parentid != null"> and parentid = #{parentid}</if>
+            <if test="context != null"> and context like concat('%', #{context}, '%')</if>
+            <if test="satisfaction != null"> and satisfaction = #{satisfaction}</if>
+            <if test="attachment != null"> and attachment like concat('%', #{attachment}, '%')</if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.Ahaveanswer">
+        select
+        <include refid="Base_Column_List" />
+        from ahaveanswer
+        where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from ahaveanswer
+        where  id = #{id}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.entity.Ahaveanswer" useGeneratedKeys="true" keyProperty="id">
+        insert into ahaveanswer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="questiontext != null">questiontext,</if>
+            <if test="prompt != null">prompt,</if>
+            <if test="agent != null">agent,</if>
+            <if test="asktime != null">asktime,</if>
+            <if test="genestatus != null">genestatus,</if>
+            <if test="answertime != null">answertime,</if>
+            <if test="answer != null">answer,</if>
+            <if test="tag != null">tag,</if>
+            <if test="parentid != null">parentid,</if>
+            <if test="context != null">context,</if>
+            <if test="satisfaction != null">satisfaction,</if>
+            <if test="attachment != null">attachment,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="questiontext != null">#{questiontext},</if>
+            <if test="prompt != null">#{prompt},</if>
+            <if test="agent != null">#{agent},</if>
+            <if test="asktime != null">#{asktime},</if>
+            <if test="genestatus != null">#{genestatus},</if>
+            <if test="answertime != null">#{answertime},</if>
+            <if test="answer != null">#{answer},</if>
+            <if test="tag != null">#{tag},</if>
+            <if test="parentid != null">#{parentid},</if>
+            <if test="context != null">#{context},</if>
+            <if test="satisfaction != null">#{satisfaction},</if>
+            <if test="attachment != null">#{attachment},</if>
+        </trim>
+    </insert>
+    <!-- 更新answer字段 -->
+    <update id="updateAnswer">
+        UPDATE ahaveanswer
+        SET answer = #{answer}
+        WHERE id = #{putid}
+    </update>
+    <update id="updateById" parameterType="com.example.entity.Ahaveanswer">
+        update ahaveanswer
+        <set>
+            <if test="questiontext != null">
+                questiontext = #{questiontext},
+            </if>
+            <if test="prompt != null">
+                prompt = #{prompt},
+            </if>
+            <if test="agent != null">
+                agent = #{agent},
+            </if>
+            <if test="asktime != null">
+                asktime = #{asktime},
+            </if>
+            <if test="genestatus != null">
+                genestatus = #{genestatus},
+            </if>
+            <if test="answertime != null">
+                answertime = #{answertime},
+            </if>
+            <if test="answer != null">
+                answer = #{answer},
+            </if>
+            <if test="tag != null">
+                tag = #{tag},
+            </if>
+            <if test="parentid != null">
+                parentid = #{parentid},
+            </if>
+            <if test="context != null">
+                context = #{context},
+            </if>
+            <if test="satisfaction != null">
+                satisfaction = #{satisfaction},
+            </if>
+            <if test="attachment != null">
+                attachment = #{attachment},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+</mapper>

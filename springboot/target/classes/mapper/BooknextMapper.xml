@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.BooknextMapper">
+
+    <sql id="Base_Column_List">
+        id,docname,docmary,docpath,uploadone,courseid,coursename
+    </sql>
+
+    <select id="selectAll" resultType="com.example.entity.Booknext">
+        select
+        <include refid="Base_Column_List" />
+        from booknext
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="docname != null"> and docname like concat('%', #{docname}, '%')</if>
+            <if test="docmary != null"> and docmary like concat('%', #{docmary}, '%')</if>
+            <if test="docpath != null"> and docpath like concat('%', #{docpath}, '%')</if>
+            <if test="uploadone != null"> and uploadone like concat('%', #{uploadone}, '%')</if>
+            <if test="courseid != null"> and courseid = #{courseid}</if>
+            <if test="coursename != null"> and coursename like concat('%', #{coursename}, '%')</if>
+        </where>
+        order by id desc
+    </select>
+    <select id="selectbycourseid" resultType="com.example.entity.Booknext" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List" />
+        from booknext
+        where courseid = #{id}
+        order by id desc
+    </select>
+    <select id="selectById" resultType="com.example.entity.Booknext">
+        select
+        <include refid="Base_Column_List" />
+        from booknext
+        where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from booknext
+        where  id = #{id}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.entity.Booknext" useGeneratedKeys="true" keyProperty="id">
+        insert into booknext
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="docname != null">docname,</if>
+            <if test="docmary != null">docmary,</if>
+            <if test="docpath != null">docpath,</if>
+            <if test="uploadone != null">uploadone,</if>
+            <if test="courseid != null">courseid,</if>
+            <if test="coursename != null">coursename,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="docname != null">#{docname},</if>
+            <if test="docmary != null">#{docmary},</if>
+            <if test="docpath != null">#{docpath},</if>
+            <if test="uploadone != null">#{uploadone},</if>
+            <if test="courseid != null">#{courseid},</if>
+            <if test="coursename != null">#{coursename},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" parameterType="com.example.entity.Booknext">
+        update booknext
+        <set>
+            <if test="docname != null">
+                docname = #{docname},
+            </if>
+            <if test="docmary != null">
+                docmary = #{docmary},
+            </if>
+            <if test="docpath != null">
+                docpath = #{docpath},
+            </if>
+            <if test="uploadone != null">
+                uploadone = #{uploadone},
+            </if>
+            <if test="courseid != null">
+                courseid = #{courseid},
+            </if>
+            <if test="coursename != null">
+                coursename = #{coursename},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+</mapper>

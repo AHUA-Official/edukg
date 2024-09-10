@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TblMessageTpmMapper">
+
+    <sql id="Base_Column_List">
+        id,template_id,template_type,template_topic,content,create_time,create_user,update_time,update_user,status
+    </sql>
+
+    <select id="selectAll" resultType="com.example.entity.TblMessageTpm">
+        select
+        <include refid="Base_Column_List" />
+        from tbl_message_tpm
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="templateId != null"> and template_id like concat('%', #{templateId}, '%')</if>
+            <if test="templateType != null"> and template_type like concat('%', #{templateType}, '%')</if>
+            <if test="templateTopic != null"> and template_topic like concat('%', #{templateTopic}, '%')</if>
+            <if test="content != null"> and content like concat('%', #{content}, '%')</if>
+            <if test="createTime != null"> and create_time = #{createTime}</if>
+            <if test="createUser != null"> and create_user like concat('%', #{createUser}, '%')</if>
+            <if test="updateTime != null"> and update_time = #{updateTime}</if>
+            <if test="updateUser != null"> and update_user like concat('%', #{updateUser}, '%')</if>
+            <if test="status != null"> and status = #{status}</if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.TblMessageTpm">
+        select
+        <include refid="Base_Column_List" />
+        from tbl_message_tpm
+        where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from tbl_message_tpm
+        where  id = #{id}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.entity.TblMessageTpm" useGeneratedKeys="true" keyProperty="id">
+        insert into tbl_message_tpm
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="templateId != null">template_id,</if>
+            <if test="templateType != null">template_type,</if>
+            <if test="templateTopic != null">template_topic,</if>
+            <if test="content != null">content,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createUser != null">create_user,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="updateUser != null">update_user,</if>
+            <if test="status != null">status,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="templateId != null">#{templateId},</if>
+            <if test="templateType != null">#{templateType},</if>
+            <if test="templateTopic != null">#{templateTopic},</if>
+            <if test="content != null">#{content},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createUser != null">#{createUser},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="updateUser != null">#{updateUser},</if>
+            <if test="status != null">#{status},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" parameterType="com.example.entity.TblMessageTpm">
+        update tbl_message_tpm
+        <set>
+            <if test="templateId != null">
+                template_id = #{templateId},
+            </if>
+            <if test="templateType != null">
+                template_type = #{templateType},
+            </if>
+            <if test="templateTopic != null">
+                template_topic = #{templateTopic},
+            </if>
+            <if test="content != null">
+                content = #{content},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+</mapper>

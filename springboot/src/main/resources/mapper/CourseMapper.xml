@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.CourseMapper">
+
+    <select id="selectAll" resultType="com.example.entity.Course">
+        SELECT `course`.*, `teacher`.`user_jub_num` AS teacher
+        FROM `course`
+                 LEFT JOIN `teacher` ON `course`.`teacher_id` = `teacher`.user_jub_num
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.Course">
+        select * from course where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from course where  id = #{id}
+    </delete>
+    <!-- 根据教师ID查询课程列表 -->
+    <select id="selectByTeacherId" resultType="com.example.entity.Course">
+        SELECT * FROM course WHERE teacher_id = #{teacherId}
+    </select>
+    <update id="softDeleteByCourseNameAndTeacher">
+        UPDATE course
+        SET isdel = 'Y'
+        WHERE coursename = #{coursename}
+          AND teacher_id = #{teacherID}
+    </update>
+</mapper>

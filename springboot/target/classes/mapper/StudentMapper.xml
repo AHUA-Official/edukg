@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.StudentMapper">
+
+    <select id="selectAll" resultType="com.example.entity.Student">
+        select `student`.* from `student`
+
+        <where>
+			<if test="username != null and username != ''">
+				and `student`.`username` like concat ('%', #{username}, '%')
+			</if>
+
+        </where>
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.Student">
+        select * from student where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from student where  id = #{id}
+    </delete>
+    <!-- 假设这是你的 XML 映射文件的一部分 -->
+    <select id="selectByUsername" parameterType="java.lang.String" resultType="com.example.entity.Student">
+        SELECT *
+        FROM student
+        WHERE username = #{name}
+    </select>
+</mapper>

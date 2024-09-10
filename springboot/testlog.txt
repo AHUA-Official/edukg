@@ -1,0 +1,278 @@
+Autograder [Tue May 14 21:53:58 2024]: Received job CNS_s2024_itertcpcsarith_9_2022090917008@std.uestc.edu.cn:177
+Autograder [Tue May 14 21:54:07 2024]: Success: Autodriver returned normally
+Autograder [Tue May 14 21:54:07 2024]: Here is the output from the autograder:
+---
+Autodriver: Job exited with status 0
+[ANTE] Compiling stu_code succeeded!
+---------------------------------------------------------------------
+///////////////////// AUTOGRADING TEST ROUND 1 //////////////////////
+[PREP] Test data is ready!
+[TEST] stu_srv is running now!
+[TEST] std_cli is finished now!
+[TEST] SIGINT is sent successfully!
+[TEST] Test of stu_srv is finished now!
+[TEST] std_srv is running now!
+[TEST] stu_cli is finished now!
+[TEST] Test of stu_cli is finished now!
+[ERRO]  0 Point : student code has critical error, grading conditions cannot be satisfied!
+---------------------------------------------------------------------
+///////////////////// AUTOGRADING TEST ROUND 2 //////////////////////
+[PREP] Test data is ready!
+[TEST] stu_srv is running now!
+[TEST] std_cli is finished now!
+[TEST] SIGINT is sent successfully!
+[TEST] Test of stu_srv is finished now!
+[TEST] std_srv is running now!
+[TEST] stu_cli is finished now!
+[TEST] Test of stu_cli is finished now!
+[ERRO]  0 Point : student code has critical error, grading conditions cannot be satisfied!
+---------------------------------------------------------------------
+///////////////////// AUTOGRADING TEST ROUND 3 //////////////////////
+[PREP] Test data is ready!
+[TEST] stu_srv is running now!
+[TEST] std_cli is finished now!
+[TEST] SIGINT is sent successfully!
+[TEST] Test of stu_srv is finished now!
+[TEST] std_srv is running now!
+[TEST] stu_cli is finished now!
+[TEST] Test of stu_cli is finished now!
+[ERRO]  0 Point : student code has critical error, grading conditions cannot be satisfied!
+---------------------------------------------------------------------
+//////////// 【TEST 1】OUTPUT TEST DATA: ///////////////////////////
+ADD 4328667 943410
+MOD 375887531 578491695
+SUB 3132867 92406
+MUL 1650322229 5765
+DIV 4444831 57797881924
+ADD 64014520 955495102
+MOD 4062757924 43055311
+SUB 843 686818787
+MUL 891094875287 1500318
+DIV 15865824 8759399191
+EXIT
+{
+  "ipv4": "127.0.0.1",
+  "port": 39758,
+  "bias": 9161
+}
+---------------------------------------------------------------------
+//////////// 【TEST 1】OUTPUT STU_SRV RESULT: //////////////////////
+---------------------------------------------------------------------
+//////////// 【TEST 1】OUTPUT STU_CLI RESULT: //////////////////////
+[cli] server[127.0.0.1:39758] is connected!
+Enter commands (e.g., 'ADD 1 1'). Type 'exit' to quit.
+> Sending PDU: 0000000100420cdb00000000000e653200000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346200670733
+> Sending PDU: 00000010166796ab00000000227b152f00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346571286187
+> Sending PDU: 00000002002fcdc300000000000168f600000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346198439117
+> Sending PDU: 00000004625deb35000000000000168500000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346195398656
+> Sending PDU: 000000080043d29f000000007505b0440000000d
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346195398656
+> Sending PDU: 0000000103d0c8b80000000038f3b2be00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39347214908278
+> Sending PDU: 00000010f228c424000000000290f8cf00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39350473433135
+> Sending PDU: 000000020000034b0000000028f005e300000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39349803548008
+> Sending PDU: 000000047964bc97000000cf0016e49e00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346505964482
+> Sending PDU: 0000000800f217e0000000000a19d31700000002
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 39346195398656
+> [cli] command exit received
+[cli] client is going to exit!
+[cli] connfd is closed!
+---------------------------------------------------------------------
+//////////// 【TEST 1】OUTPUT STU_SRV SOCKET SYSTEM CALLS: /////////
+cat: std_srv_ssc.txt: No such file or directory
+[EXPECTED]:
+cat: stu_srv_ssc.txt: No such file or directory
+[STU_SRV_]:
+---------------------------------------------------------------------
+//////////// 【TEST 1】OUTPUT STU_CLI SOCKET SYSTEM CALLS: /////////
+cat: std_cli_ssc.txt: No such file or directory
+[EXPECTED]:
+cat: stu_cli_ssc.txt: No such file or directory
+[STU_CLI_]:
+---------------------------------------------------------------------
+//////////// 【TEST 2】OUTPUT TEST DATA: ///////////////////////////
+MUL 9318 990852750
+ADD 616536383 569960977410
+SUB 9269 73539030394
+DIV 93340 29766983874
+MOD 656046448 9587728
+MUL 876140507072 5078
+ADD 673 554277309934
+SUB 7923255479 5397
+DIV 19916417 679563
+MOD 450346167 8471319903
+EXIT
+{
+  "ipv4": "127.0.0.17",
+  "port": 34513,
+  "bias": 8009
+}
+---------------------------------------------------------------------
+//////////// 【TEST 2】OUTPUT STU_SRV RESULT: //////////////////////
+---------------------------------------------------------------------
+//////////// 【TEST 2】OUTPUT STU_CLI RESULT: //////////////////////
+[cli] server[127.0.0.17:34513] is connected!
+Enter commands (e.g., 'ADD 1 1'). Type 'exit' to quit.
+> Sending PDU: 0000000400002466000000003b0f368e00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34398393073664
+> Sending PDU: 0000000124bf993f00000000b452540200000084
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34968970587457
+> Sending PDU: 0000000200002435000000001f448d7a00000011
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34329149019835
+> Sending PDU: 0000000800016c9c00000000ee4020c200000006
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34398393073664
+> Sending PDU: 00000010271a79700000000000924c1000000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34398397154608
+> Sending PDU: 00000004fe0b2fc0000000cb000013d600000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34398394104498
+> Sending PDU: 00000001000002a1000000000d808dee00000081
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34952670384271
+> Sending PDU: 00000002d84348b7000000010000151500000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34406316323746
+> Sending PDU: 00000008012fe68100000000000a5e8b00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34522947125248
+> Sending PDU: 000000101ad7bcb700000000f8ee155f00000001
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 34411372477652
+> [cli] command exit received
+[cli] client is going to exit!
+[cli] connfd is closed!
+---------------------------------------------------------------------
+//////////// 【TEST 2】OUTPUT STU_SRV SOCKET SYSTEM CALLS: /////////
+cat: std_srv_ssc.txt: No such file or directory
+[EXPECTED]:
+cat: stu_srv_ssc.txt: No such file or directory
+[STU_SRV_]:
+---------------------------------------------------------------------
+//////////// 【TEST 2】OUTPUT STU_CLI SOCKET SYSTEM CALLS: /////////
+cat: std_cli_ssc.txt: No such file or directory
+[EXPECTED]:
+cat: stu_cli_ssc.txt: No such file or directory
+[STU_CLI_]:
+---------------------------------------------------------------------
+//////////// 【TEST 3】OUTPUT TEST DATA: ///////////////////////////
+MUL 118124328398 734720
+ADD 34372 102829
+DIV 21370 33348
+MOD 60867831937 94714194703
+SUB 1169 2747
+MUL 5841821 982574730326
+ADD 830717 305423912
+DIV 472203620 91865
+MOD 482 50855
+SUB 117577940 4824762
+EXIT
+{
+  "ipv4": "127.0.0.25",
+  "port": 33987,
+  "bias": 4744
+}
+---------------------------------------------------------------------
+//////////// 【TEST 3】OUTPUT STU_SRV RESULT: //////////////////////
+---------------------------------------------------------------------
+//////////// 【TEST 3】OUTPUT STU_CLI RESULT: //////////////////////
+[cli] server[127.0.0.25:33987] is connected!
+Enter commands (e.g., 'ADD 1 1'). Type 'exit' to quit.
+> Sending PDU: 0000000480c235ce0000001b000b360000000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20375344689664
+> Sending PDU: 000000010000864400000000000191ad00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20375324989425
+> Sending PDU: 000000080000537a000000000000824400000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20375324852224
+> Sending PDU: 000000102c0168810000000e0d67eb0f00000016
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20152050100052
+> Sending PDU: 00000002000004910000000000000abb00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20379619817942
+> Sending PDU: 000000040059239d00000000c6048c56000000e4
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20376656787412
+> Sending PDU: 00000001000cacfd000000001234662800000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20375631106853
+> Sending PDU: 000000081c25416400000000000166d900000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 42451456753664
+> Sending PDU: 00000010000001e2000000000000c6a700000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20375324852706
+> Sending PDU: 00000002070218d40000000000499eba00000000
+PDU sent successfully.
+Ready to receive response PDU...
+Received result from server: 20375437605402
+> [cli] command exit received
+[cli] client is going to exit!
+[cli] connfd is closed!
+---------------------------------------------------------------------
+//////////// 【TEST 3】OUTPUT STU_SRV SOCKET SYSTEM CALLS: /////////
+cat: std_srv_ssc.txt: No such file or directory
+[EXPECTED]:
+cat: stu_srv_ssc.txt: No such file or directory
+[STU_SRV_]:
+---------------------------------------------------------------------
+//////////// 【TEST 3】OUTPUT STU_CLI SOCKET SYSTEM CALLS: /////////
+cat: std_cli_ssc.txt: No such file or directory
+[EXPECTED]:
+cat: stu_cli_ssc.txt: No such file or directory
+[STU_CLI_]:
+---------------------------------------------------------------------
+{"scores": {"Correctness": 0}}
