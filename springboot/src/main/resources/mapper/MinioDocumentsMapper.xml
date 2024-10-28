@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.MinioDocumentsMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.entity.MinioDocuments" >
+        <result column="document_name" property="document_name" />
+        <result column="minio_url" property="minio_url" />
+        <result column="symbol" property="symbol" />
+        <result column="preview" property="preview" />
+        <result column="need_parse" property="need_parse" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        document_name,
+                minio_url,
+                symbol,
+                preview,
+                need_parse
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyColumn="id" keyProperty="id" parameterType="com.example.entity.MinioDocuments">
+        INSERT INTO minio_documents
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="null != document_name and '' != document_name">
+                document_name,
+            </if>
+            <if test="null != minio_url and '' != minio_url">
+                minio_url,
+            </if>
+            <if test="null != symbol and '' != symbol">
+                symbol,
+            </if>
+            <if test="null != preview and '' != preview">
+                preview,
+            </if>
+            <if test="null != need_parse ">
+                need_parse
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="null != document_name and '' != document_name">
+                #{document_name},
+            </if>
+            <if test="null != minio_url and '' != minio_url">
+                #{minio_url},
+            </if>
+            <if test="null != symbol and '' != symbol">
+                #{symbol},
+            </if>
+            <if test="null != preview and '' != preview">
+                #{preview},
+            </if>
+            <if test="null != need_parse ">
+                #{need_parse}
+            </if>
+        </trim>
+    </insert>
+
+    <delete id="delete" >
+        DELETE FROM minio_documents
+        WHERE id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.example.entity.MinioDocuments">
+        UPDATE minio_documents
+        <set>
+            <if test="null != document_name and '' != document_name">document_name = #{document_name},</if>
+            <if test="null != minio_url and '' != minio_url">minio_url = #{minio_url},</if>
+            <if test="null != symbol and '' != symbol">symbol = #{symbol},</if>
+            <if test="null != preview and '' != preview">preview = #{preview},</if>
+            <if test="null != need_parse ">need_parse = #{need_parse}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+
+    <select id="load" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" />
+        FROM minio_documents
+        WHERE id = #{id}
+    </select>
+
+    <select id="pageList" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" />
+        FROM minio_documents
+        LIMIT #{offset}, #{pageSize}
+    </select>
+
+    <select id="pageListCount" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM minio_documents
+    </select>
+
+</mapper>

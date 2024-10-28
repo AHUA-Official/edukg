@@ -4,88 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="合并两边工程">
-      <change afterPath="$PROJECT_DIR$/.idea/UploadStorage.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/1723375178759-裸金属机器Vmware环境搭建.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/1723376800971-裸金属机器Vmware环境搭建.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/fufuAA12024年8月4日美化我的谷歌浏览器.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/裸金属机器Vmware环境搭建.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AcquireanswerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AhaveanswerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/BookcompnetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/BooknextController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/EntityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FurinaBigModelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FurinaKNListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FurinaReaderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FurinaTripleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FurinabookpinglunController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/TripleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/edukgCourseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/isOKController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Acquireanswer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Ahaveanswer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Bookcompnet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Booknext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/KNLIST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Triple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AcquireanswerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AhaveanswerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/BookcompnetMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/BooknextMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/EntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/KNLISTMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/TripleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AcquireanswerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AhaveanswerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/BookcompnetService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/BooknextService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/EntityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/KNLISTService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/TripleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jsons/edukg1A计算机网络A第1章.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jsons/edukg1A计算机网络A第2章.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jsons/edukg1A计算机网络A第一章.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AcquireanswerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AhaveanswerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookcompnetMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BooknextMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/EntityMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/KNLISTMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TripleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1003916f-7bde-455a-8d99-3994b6f2ba6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1003916f-7bde-455a-8d99-3994b6f2ba6a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/43a4ebfc-b0d6-4538-8349-c76c0bd166a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/43a4ebfc-b0d6-4538-8349-c76c0bd166a4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="合并两边工程dfgh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/common/config/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/common/config/TokenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/EdukgUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/EdukgUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/Login0720Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/Login0720Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/edukgregisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/edukgregisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/SMSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/SMSService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/service/SMSService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/service/SMSService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -150,10 +72,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
-}</component>
   <component name="ProjectId" id="2gE68NWEiXwENd3ZOZtzG7KlW7c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -162,27 +80,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.springboot [clean].executor": "Run",
-    "Maven.springboot [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "Spring Boot.SpringbootApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/fufuProject/edukg/springboot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\edukg\springboot\src\main\java\com\example\controller" />
       <recent name="D:\edukg\springboot\src\main\resources\mapper" />
@@ -203,9 +115,9 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="?" />
-      <command value="mvn   package" />
-      <command value="mvn clean" />
       <command value="mvn package" />
+      <command value="mvn clean" />
+      <command value="mvn   package" />
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringbootApplication">
@@ -319,6 +231,14 @@
       <workItem from="1724322065881" duration="55000" />
       <workItem from="1725783046479" duration="571000" />
       <workItem from="1725783754290" duration="3195000" />
+      <workItem from="1726550896167" duration="3720000" />
+      <workItem from="1727357066697" duration="2568000" />
+      <workItem from="1728735666160" duration="346000" />
+      <workItem from="1729151671038" duration="834000" />
+      <workItem from="1729234490679" duration="16000" />
+      <workItem from="1729257353051" duration="7437000" />
+      <workItem from="1730111977478" duration="22000" />
+      <workItem from="1730128007033" duration="3205000" />
     </task>
     <task id="LOCAL-00001" summary="规划局">
       <created>1715348058764</created>
@@ -411,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722136838333</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="合并两边工程dfgh">
+      <created>1730131172935</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730131172935</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +354,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -436,7 +364,8 @@
     <MESSAGE value="asdfghjkl" />
     <MESSAGE value="添加PDF切分成图片的接口   和请求PDF   返回对应的图片的URL     用于构建网页    待做     把图片url和评论做绑定      更好的pdf处理   简单粗暴切图片有点不好" />
     <MESSAGE value="合并两边工程" />
-    <option name="LAST_COMMIT_MESSAGE" value="合并两边工程" />
+    <MESSAGE value="合并两边工程dfgh" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并两边工程dfgh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -458,13 +387,13 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/Login0720Controller.java</url>
-          <line>3</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
+          <line>1</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/common/config/JwtInterceptor.java</url>
-          <line>46</line>
+          <line>39</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -473,18 +402,18 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/Login0720Controller.java</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
+          <line>2</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/Login0720Controller.java</url>
-          <line>100</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
+          <line>66</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/Login0720Controller.java</url>
-          <line>99</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
+          <line>117</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

@@ -9,6 +9,7 @@ E:\fufuProject\edukg\springboot\src\main\java\com\example\mapper\BooknextMapper.
 E:\fufuProject\edukg\springboot\src\main\java\com\example\mapper\KNLISTMapper.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\service\TblMessageTpmService.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\SMSController.java
+E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\AAFurinaLoginController.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\service\AdminService.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\ChatController.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\service\BigModelNewService.java
@@ -19,6 +20,7 @@ E:\fufuProject\edukg\springboot\src\main\java\com\example\mapper\GraphnodeMapper
 E:\fufuProject\edukg\springboot\src\main\java\com\example\entity\KNLIST.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\BookcompnetController.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\mapper\AhaveanswerMapper.java
+E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\TESTController.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\mapper\TeacherMapper.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\EntityController.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\service\TripleService.java
@@ -106,7 +108,6 @@ E:\fufuProject\edukg\springboot\src\main\java\com\example\mapper\TblMessageTpmMa
 E:\fufuProject\edukg\springboot\src\main\java\com\example\service\LoginService.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\common\config\JwtInterceptor.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\testupdatemsgController.java
-E:\fufuProject\edukg\springboot\src\main\java\com\example\controller\Login0720Controller.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\entity\Student.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\entity\UserInfo.java
 E:\fufuProject\edukg\springboot\src\main\java\com\example\entity\Acquireanswer.java
