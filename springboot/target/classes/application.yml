@@ -57,3 +57,5 @@ pdf:
   upload:
     path: D:/edukg/PDFS
 ip: localhost
+
+#minio配置

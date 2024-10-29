@@ -15,11 +15,7 @@ public class AAFurinaminioController {
 
     @GetMapping("/miniodoc/getundoc")
     public ResponseEntity<Map<String, Object>> getUndocumentedDocument(@RequestParam String symbol) {
-        Map<String, Object> documentInfo = minioDocumentService.findDocumentToParseBySymbol(symbol);
-        if (documentInfo == null || documentInfo.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return ResponseEntity.ok(documentInfo);
+ return  null;
     }
 
 
