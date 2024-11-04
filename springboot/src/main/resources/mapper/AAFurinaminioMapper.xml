@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.AAFurinaminioMapper">
+
+
+
+    <sql id="Base_Column_List">
+        document_id, document_name, minio_url, symbol, need_parse, preview
+    </sql>
+
+    <insert id="insertdoc" parameterType="com.example.entity.AAFurinaminiodocuments" useGeneratedKeys="true" keyProperty="document_id">
+        INSERT INTO miniodocuments (document_id, document_name, minio_url, symbol, need_parse, preview)
+        VALUES (#{document_id}, #{documentName}, #{minioUrl}, #{symbol}, #{needParse}, #{preview})
+    </insert>
+
+</mapper>

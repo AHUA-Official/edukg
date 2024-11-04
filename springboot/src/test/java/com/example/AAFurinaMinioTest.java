@@ -10,12 +10,16 @@ import io.minio.messages.Item;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.nio.file.Files;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
@@ -30,6 +34,19 @@ public class AAFurinaMinioTest {
     @Test
     void  zltry1(){
         minioService.testMinIOClient();
+
+    }
+    @Test
+    void zlsql1(){
+        File file = new File("E:\\性能测试\\面试避坑.md");
+        // 调用 uploadFile 方法，这里需要根据您的方法签名传递正确的参数
+        Map<String, Object> result = minioService.uploadFile(file, "document", "symbol", "version", "chain");
+        System.out.println(result);
+    }
+    @Test
+    void py(){
+        String py =minioService.getCamelPinYin("我喜欢你.pdf.txt",false);
+        System.out.println(py);
 
     }
 

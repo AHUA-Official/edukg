@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="合并两边工程dfgh">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/common/config/minioConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" afterDir="false" />
+    <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="minio合并1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminiodocuments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaminioMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaminioMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaminioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaminioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaminioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaminioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/AAFurinaMinioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/AAFurinaMinioTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +101,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.mapper" />
       <recent name="com.example.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -130,24 +133,19 @@
       <command value="mvn   package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AAFurinaMinioTest.test09">
-    <configuration name="AAFurinaMinioTest.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="test02" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AAFurinaMinioTest.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AAFurinaMinioTest.py" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +155,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="test05" />
+      <option name="METHOD_NAME" value="py" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,13 +209,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AAFurinaMinioTest.zlsql1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="zlsql1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql1" />
+        <item itemvalue="JUnit.AAFurinaMinioTest.py" />
         <item itemvalue="JUnit.AAFurinaMinioTest.test09" />
         <item itemvalue="JUnit.AAFurinaMinioTest.test10" />
         <item itemvalue="JUnit.AAFurinaMinioTest.test08" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.test05" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.test02" />
       </list>
     </recent_temporary>
   </component>
@@ -285,6 +306,8 @@
       <workItem from="1730128007033" duration="3205000" />
       <workItem from="1730131794527" duration="1448000" />
       <workItem from="1730210577160" duration="6011000" />
+      <workItem from="1730220466648" duration="101000" />
+      <workItem from="1730729999635" duration="9464000" />
     </task>
     <task id="LOCAL-00001" summary="规划局">
       <created>1715348058764</created>
@@ -384,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730131172935</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="minio合并1">
+      <created>1730220502461</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730220502462</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +441,8 @@
     <MESSAGE value="添加PDF切分成图片的接口   和请求PDF   返回对应的图片的URL     用于构建网页    待做     把图片url和评论做绑定      更好的pdf处理   简单粗暴切图片有点不好" />
     <MESSAGE value="合并两边工程" />
     <MESSAGE value="合并两边工程dfgh" />
-    <option name="LAST_COMMIT_MESSAGE" value="合并两边工程dfgh" />
+    <MESSAGE value="minio合并1" />
+    <option name="LAST_COMMIT_MESSAGE" value="minio合并1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
