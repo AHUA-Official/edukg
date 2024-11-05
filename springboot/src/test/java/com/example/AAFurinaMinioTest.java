@@ -1,6 +1,7 @@
 package com.example;
 
 
+import com.example.entity.AAFurinaminiodocuments;
 import com.example.service.AAFurinaminioService;
 import io.minio.*;
 
@@ -40,15 +41,42 @@ public class AAFurinaMinioTest {
     void zlsql1(){
         File file = new File("E:\\性能测试\\面试避坑.md");
         // 调用 uploadFile 方法，这里需要根据您的方法签名传递正确的参数
-        Map<String, Object> result = minioService.uploadFile(file, "document", "symbol", "version", "chain");
+        Map<String, Object> result = minioService.uploadFile(file, "document", "symbol", "1", "1","furina");
         System.out.println(result);
     }
+
+    @Test
+    void zlsql2() {
+        File file = new File("E:\\性能测试\\面试避坑.md");
+        // 调用 uploadFile 方法，这里需要根据您的方法签名传递正确的参数
+        Map<String, Object> result = minioService.uploadFile(file, "parse_json", "symbol", "1", "1", "db5a83f1-506c-4062-8f7d-b7304e62f219");
+        System.out.println(result);
+    }
+
+    @Test
+    void zlsql3() {
+
+        Map<String, Object> result = minioService.checkDocumentId("db5a83f1-506c-4062-8f7d-b7304e62f219");
+        System.out.println(result);
+    }
+    @Test
+    void zlsql4() {
+
+        List <AAFurinaminiodocuments> result = minioService.updateNeedParseToWaiting(10);
+        System.out.println(result);
+    }
+
+
+
+
+
     @Test
     void py(){
         String py =minioService.getCamelPinYin("我喜欢你.pdf.txt",false);
         System.out.println(py);
 
     }
+
 
 
 

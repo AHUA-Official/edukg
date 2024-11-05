@@ -31,7 +31,8 @@ public ResponseEntity<Map<String, Object>> uploadFile(
         @RequestParam(value = "object", required = true) String object,
         @RequestParam(value = "symbol", required = false) String symbol,
         @RequestParam(value = "version", required = false) String version,
-        @RequestParam(value = "chain", required = false) String chain
+        @RequestParam(value = "chain", required = false) String chain,
+        @RequestParam(value = "documentuuid", required = false) String documentuuid
 ) {
 
     try {
@@ -40,7 +41,7 @@ public ResponseEntity<Map<String, Object>> uploadFile(
         file.transferTo(tempFile);
 
         // 调用服务层方法，传入 File 对象和其他参数
-        Map<String, Object> response = minioDocumentService.uploadFile(tempFile, object, symbol, version, chain);
+        Map<String, Object> response = minioDocumentService.uploadFile(tempFile, object, symbol, version, chain,documentuuid);
 
         // 删除临时文件
         tempFile.delete();

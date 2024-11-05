@@ -15,4 +15,20 @@
         VALUES (#{document_id}, #{documentName}, #{minioUrl}, #{symbol}, #{needParse}, #{preview})
     </insert>
 
+    <select id="checkdocid" parameterType="String" resultType="String">
+        SELECT document_id FROM miniodocuments WHERE document_id = #{documentId}
+    </select>
+
+    <insert id="insertjson" parameterType="com.example.entity.AAFurinaminioprasejson" useGeneratedKeys="true" keyProperty="jsondocuuid">
+        INSERT INTO parse_json (jsondocuuid, document_id, jsondoc_name, json_minio_url, chain_id, version_num, symbol)
+        VALUES (#{id}, #{documentId}, #{jsondocName}, #{jsonMinioUrl}, #{chainId}, #{versionNum}, #{symbol})
+    </insert>
+    <select id="selectDocumentsNeedParse" resultType="com.example.entity.AAFurinaminiodocuments">
+        SELECT * FROM miniodocuments WHERE need_parse = 'True'LIMIT #{limit}
+    </select>
+
+    <update id="updateDocumentStatus">
+        UPDATE miniodocuments SET need_parse = #{status} WHERE document_id = #{documentId}
+    </update>
+
 </mapper>

@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.entity.AAFurinaminiodocuments;
+import com.example.entity.AAFurinaminioprasejson;
 import com.example.mapper.AAFurinaminioMapper;
 import io.minio.*;
 import io.minio.errors.*;
@@ -31,6 +32,7 @@ public class AAFurinaminioService {
     private MinioClient minioClient;
     @Resource
     private AAFurinaminioMapper miniodocumentsMapper;
+
     public  String getCamelPinYin(String hz, boolean type) {
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
         format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
@@ -61,12 +63,11 @@ public class AAFurinaminioService {
         return r.toString();
     }
 
-
     public void testMinIOClient() {
         System.out.println(minioClient);
     }
 
-    public Map<String, Object> uploadFile(File file, String myobject, String symbol, String version, String chain) {
+    public Map<String, Object> uploadFile(File file, String myobject, String symbol, String version, String chain,String documentuuid) {
         // 实现上传文件的逻辑 写入表格和写入minio的OSS存储
         //存储桶   写死为 furina
         //存储路径   存储桶下面  然后第一层写该文件名转英语/拼音的文件   第二层写入该文件的文件名
@@ -75,8 +76,9 @@ public class AAFurinaminioService {
         String filename = file.getName();
         String object = myobject;
         String extractedSymbol = (symbol != null && !symbol.isEmpty()) ? symbol : "furina";
-        String extractedVersion = (version != null && !version.isEmpty()) ? version : "1";
-        String extractedChain = (chain != null && !chain.isEmpty()) ? chain : "1";
+        int extractedVersion = (version != null && !version.isEmpty()) ? Integer.parseInt(version) : 1;
+        int  extractedChain = (chain != null && !chain.isEmpty()) ? Integer.parseInt(chain) : 1;
+        String extradocumentuuid = (documentuuid != null && !chain.isEmpty()) ? documentuuid : "furina";
         // String miniourl = "aaa";//@@@
         String needParse = "True";
         String Previw = "can not preview";
@@ -100,16 +102,6 @@ public class AAFurinaminioService {
         );
                 System.out.println( objectWriteResponse);
 
-
-                //File file = new File("E:\\性能测试\\面试避坑.md");
-////        1  对象的流传输参数
-//        ObjectWriteResponse objectWriteResponse = minioClient.putObject(PutObjectArgs.builder()
-//                .bucket("furina")
-//                .object("aaa/tse.md")
-//                .stream(new FileInputStream(file), file.length(), -1)
-//                .build()
-//        );
-//        System.out.println(objectWriteResponse);
                 String miniourl = "http://49.234.47.133:9000/" + bucketName + "/" + objectName; // 假设 MinIO 的访问 URL
 
 
@@ -141,12 +133,113 @@ public class AAFurinaminioService {
         }
 
         if ("parse_json".equals(object)) {
-            System.out.println("我喜欢你");
+            String bucketName = "furina";
+            String namepath = filename.substring(0, filename.lastIndexOf("."));
+            String pinyinNamepath = getCamelPinYin(namepath, true);
+            String englishFilename = getCamelPinYin(filename, false);
+            try {
+                // 上传文件到 MinIO
+                String objectName = pinyinNamepath + "/" + englishFilename;
+                String  json_bucketspath = "jsonsets"+"/" + englishFilename;
+                ObjectWriteResponse objectWriteResponse = minioClient.putObject(PutObjectArgs.builder()
+                        .bucket(bucketName)
+                        .object(objectName)
+                        .stream(new FileInputStream(file), file.length(), -1)
+                        .build()
+                );
+                System.out.println( objectWriteResponse);
+
+                ObjectWriteResponse jsonobjectWriteResponse = minioClient.putObject(PutObjectArgs.builder()
+                        .bucket(bucketName)
+                        .object(json_bucketspath)
+                        .stream(new FileInputStream(file), file.length(), -1)
+                        .build()
+                );
+                System.out.println( objectWriteResponse);
+
+
+                String miniourl = "http://49.234.47.133:9000/" + bucketName + "/" + objectName; // 假设 MinIO 的访问 URL
+
+
+                AAFurinaminioprasejson   myprase_json = new AAFurinaminioprasejson(
+                        extradocumentuuid,
+                        filename,
+                        miniourl,
+                        extractedChain,
+                        extractedVersion,
+                        extractedSymbol
+                );
+
+                String existingDocumentId = miniodocumentsMapper.checkdocid(extradocumentuuid);
+                if (existingDocumentId != null && !existingDocumentId.isEmpty()) {
+                    miniodocumentsMapper.insertjson(myprase_json);
+
+                response.put("message", "File uploaded successfully");
+                response.put("url", miniourl);
+                System.out.println(response);
+
+                return response;}else{
+                    response.put("message", "对不起 你提供的文档解析的源文件不存在");
+                    response.put("url", miniourl);
+                    System.out.println(response);
+
+                }
+
+
+
+
+            }  catch (ServerException | InsufficientDataException | ErrorResponseException | IOException |
+                    NoSuchAlgorithmException | InvalidKeyException | InvalidResponseException | XmlParserException | InternalException e) {
+                response.put("error", "Failed to upload file");
+                response.put("message", e.getMessage());
+                System.out.println(response);
+                return response;
+            }
+
         }
 
 
         return null;
+    }
+
+    public Map<String, Object> checkDocumentId(String documentId) {
+    Map<String, Object> response = new HashMap<>();
+    String existingDocumentId = miniodocumentsMapper.checkdocid(documentId);
+    if (existingDocumentId != null && !existingDocumentId.isEmpty()) {
+        response.put("message", "Document ID exists.");
+        response.put("documentId", existingDocumentId);
+        response.put("data",existingDocumentId);
+    } else {
+        response.put("message", "Document ID does not exist.");
+    }
+    return response;
+}
+
+    //给出接口  返回一条miniodocuments needprase="True的记录"并把该记录记录成Waiting
+    public List<AAFurinaminiodocuments> updateNeedParseToWaiting(int limit) {
+        // 获取 needParse="True" 的记录，限制返回的数量
+        List<AAFurinaminiodocuments> needParseDocuments = miniodocumentsMapper.selectDocumentsNeedParse(limit);
+
+
+        // 遍历记录并更新状态为 Waiting
+        for (AAFurinaminiodocuments document : needParseDocuments) {
+
+            System.out.println(document.toString());
+            System.out.println("你好 我喜欢你");
+            // 更新数据库记录
+            Integer a = miniodocumentsMapper.updateDocumentStatus(document.getId(), "Waiting");
+            System.out.println(a);
+            // 更新对象状态
+            document.setNeedParse("Waiting");
+
+        }
+
+
+        return needParseDocuments;
     }}
+
+
+
 //
 //@SpringBootTest
 //public class AAFurinaMinioTest {

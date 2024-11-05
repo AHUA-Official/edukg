@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="minio合并1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminiodocuments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaminioMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaminioMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminioprasejson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminiodocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminiodocuments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaminioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaminioMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaminioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaminioMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaminioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaminioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaminioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaminioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/AAFurinaMinioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/AAFurinaMinioTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,7 @@
       <command value="mvn   package" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
+  <component name="RunManager" selected="JUnit.AAFurinaMinioTest.zlsql4">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -145,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AAFurinaMinioTest.py" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AAFurinaMinioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
@@ -155,56 +153,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="py" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AAFurinaMinioTest.test08" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="test08" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AAFurinaMinioTest.test09" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="test09" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AAFurinaMinioTest.test10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="test10" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -225,6 +174,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AAFurinaMinioTest.zlsql2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="zlsql2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AAFurinaMinioTest.zlsql3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="zlsql3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AAFurinaMinioTest.zlsql4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="zlsql4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringbootApplication" />
@@ -234,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql4" />
+        <item itemvalue="JUnit.AAFurinaMinioTest" />
+        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql2" />
+        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql3" />
         <item itemvalue="JUnit.AAFurinaMinioTest.zlsql1" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.py" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.test09" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.test10" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.test08" />
       </list>
     </recent_temporary>
   </component>
@@ -308,6 +305,8 @@
       <workItem from="1730210577160" duration="6011000" />
       <workItem from="1730220466648" duration="101000" />
       <workItem from="1730729999635" duration="9464000" />
+      <workItem from="1730739941483" duration="140000" />
+      <workItem from="1730820119996" duration="6363000" />
     </task>
     <task id="LOCAL-00001" summary="规划局">
       <created>1715348058764</created>
@@ -463,6 +462,22 @@
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminioprasejson.java</url>
+          <line>29</line>
+          <properties class="com.example.entity.AAFurinaminioprasejson" method="setId">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminioprasejson.java</url>
+          <line>69</line>
+          <properties class="com.example.entity.AAFurinaminioprasejson" method="setVersionNum">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
           <line>1</line>
@@ -492,6 +507,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
           <line>117</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

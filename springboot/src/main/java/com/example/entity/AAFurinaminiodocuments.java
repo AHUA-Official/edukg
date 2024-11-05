@@ -87,4 +87,15 @@ public class AAFurinaminiodocuments {
         this.preview = preview;
     }
 
+    @Override
+    public String toString() {
+        return "AAFurinaminiodocuments{" +
+                "document_id='" + document_id + '\'' +
+                ", documentName='" + documentName + '\'' +
+                ", minioUrl='" + minioUrl + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", needParse='" + needParse + '\'' +
+                ", preview='" + preview + '\'' +
+                '}';
+    }
 }
