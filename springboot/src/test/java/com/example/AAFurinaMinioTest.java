@@ -2,6 +2,7 @@ package com.example;
 
 
 import com.example.entity.AAFurinaminiodocuments;
+import com.example.mapper.AAFurinaminioMapper;
 import com.example.service.AAFurinaminioService;
 import io.minio.*;
 
@@ -10,6 +11,7 @@ import io.minio.messages.Bucket;
 import io.minio.messages.Item;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,14 +24,15 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
+import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 public class AAFurinaMinioTest {
     @Resource
     private AAFurinaminioService minioService;
     @Resource
     private MinioClient  minioClient;
-
+    @Autowired
+    private AAFurinaminioMapper aAFurinaminioMapper;
 
 
     @Test
@@ -64,6 +67,48 @@ public class AAFurinaMinioTest {
 
         List <AAFurinaminiodocuments> result = minioService.updateNeedParseToWaiting(10);
         System.out.println(result);
+    }
+
+    @Test
+    void zlsql22() {
+        // 调用 updateNeedParseToWaiting 方法，传入限制数量
+        List<AAFurinaminiodocuments> result = minioService.updateNeedParseToWaiting(10);
+
+        // 验证结果是否为空
+        assertNotNull(result, "结果列表不应为空");
+
+        // 验证结果列表的大小是否符合预期
+        assertTrue(result.size() <= 10, "结果列表的大小应小于等于10");
+
+        // 验证每个文档的状态是否已更新为 "Waiting"
+        for (AAFurinaminiodocuments document : result) {
+            assertEquals("Waiting", document.getNeedParse(), "文档状态应更新为 'Waiting'");
+        }
+    }
+    @Test
+    void zlsql221() {
+        // 调用 updateNeedParseToWaiting 方法，传入限制数量
+        List<AAFurinaminiodocuments> result =aAFurinaminioMapper.selectDocumentsALL();
+        System.out.println(result);
+
+        // 验证结果是否为空
+        assertNotNull(result, "结果列表不应为空");
+
+        // 验证每个文档的状态是否已更新为 "Waiting"
+        for (AAFurinaminiodocuments document : result) {
+            System.out.println(document);
+
+        }
+    }
+    @Test
+    void testupdate() {
+
+        String documentId = "0545cfc6-c364-45ca-b932-a4b692c0963d"; // 替换成实际的文档ID
+        String status = "waiting"; // 新的状态
+
+        // 调用更新方法
+        int updatedRows = aAFurinaminioMapper.updateDocumentStatus(documentId, status);
+
     }
 
 

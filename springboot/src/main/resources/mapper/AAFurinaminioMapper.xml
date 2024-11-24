@@ -28,7 +28,17 @@
     </select>
 
     <update id="updateDocumentStatus">
-        UPDATE miniodocuments SET need_parse = #{status} WHERE document_id = #{documentId}
+        UPDATE miniodocuments
+        SET need_parse = #{status}
+        WHERE document_id = #{documentId}
     </update>
+
+    <update id="updatewaitstatus">
+        UPDATE miniodocuments SET need_parse = "wating" WHERE document_id = #{documentId}
+    </update>
+
+    <select id="selectDocumentsALL" resultType="com.example.entity.AAFurinaminiodocuments">
+        SELECT * FROM miniodocuments
+    </select>
 
 </mapper>

@@ -78,8 +78,9 @@ public class AAFurinaminiodocuments {
         generatedUUIDs.add(uuid);
         return uuid;
     }
-    public AAFurinaminiodocuments(String documentName, String minioUrl, String symbol, String needParse, String preview) {
-        this.document_id = generateUniqueUUID();
+    public AAFurinaminiodocuments(String document_id, String documentName, String minioUrl, String symbol, String needParse, String preview) {
+        this.document_id = (document_id == null || document_id.trim().isEmpty()) ? generateUniqueUUID() : document_id;
+
         this.documentName = documentName;
         this.minioUrl = minioUrl;
         this.symbol = symbol;

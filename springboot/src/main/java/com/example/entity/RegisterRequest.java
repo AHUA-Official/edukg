@@ -48,7 +48,7 @@ public class RegisterRequest {
                 ", login_type='" + login_type + '\'' +
                 ", password='" + password + '\'' +
                 ", userInfo=" + userInfo +
-                ", verification_code='" + verification_code + '\'' +
+                ", verycode='" + verification_code + '\'' +
                 ", user_name='" + user_name + '\'' +
                 ", user_email='" + user_email + '\'' +
                 ", user_phone='" + user_phone + '\'' +

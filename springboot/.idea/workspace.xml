@@ -5,15 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="minio合并1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminioprasejson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaayeyouOKController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/TestLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/isOKTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/common/config/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/common/config/JwtInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaTeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/YourController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/testminioducumentsController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminiodocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/AAFurinaminiodocuments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/RegisterRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaminioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaminioMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AcquireanswerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AcquireanswerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AhaveanswerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AhaveanswerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/BookcompnetMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/BookcompnetMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/BooknextMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/BooknextMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/CourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaminioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaminioMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/AAFurinaMinioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/common/config/JwtInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/common/config/JwtInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaminioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaminioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/entity/AAFurinaminiodocuments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entity/AAFurinaminiodocuments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/entity/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entity/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/AAFurinaminioMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/AAFurinaminioMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/AcquireanswerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/AcquireanswerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/AhaveanswerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/AhaveanswerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/BookcompnetMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/BookcompnetMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/BooknextMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/BooknextMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaminioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaminioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AAFurinaminioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AAFurinaminioMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/AAFurinaMinioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/AAFurinaMinioTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +129,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -131,7 +161,7 @@
       <command value="mvn   package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AAFurinaMinioTest.zlsql4">
+  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -143,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AAFurinaMinioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AAFurinaMinioTest.testupdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
@@ -153,12 +183,60 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="testupdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AAFurinaMinioTest.zlsql22" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="zlsql22" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AAFurinaMinioTest.zlsql221" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
+      <option name="METHOD_NAME" value="zlsql221" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="isOKTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.isOKTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AAFurinaMinioTest.zlsql1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="isOKTest.getTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
@@ -167,56 +245,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="zlsql1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AAFurinaMinioTest.zlsql2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="zlsql2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AAFurinaMinioTest.zlsql3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="zlsql3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AAFurinaMinioTest.zlsql4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AAFurinaMinioTest" />
-      <option name="METHOD_NAME" value="zlsql4" />
+      <option name="MAIN_CLASS_NAME" value="com.example.isOKTest" />
+      <option name="METHOD_NAME" value="getTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -231,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql4" />
-        <item itemvalue="JUnit.AAFurinaMinioTest" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql2" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql3" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql1" />
+        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql22" />
+        <item itemvalue="JUnit.AAFurinaMinioTest.zlsql221" />
+        <item itemvalue="JUnit.AAFurinaMinioTest.testupdate" />
+        <item itemvalue="JUnit.isOKTest.getTest" />
+        <item itemvalue="JUnit.isOKTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +336,10 @@
       <workItem from="1730220466648" duration="101000" />
       <workItem from="1730729999635" duration="9464000" />
       <workItem from="1730739941483" duration="140000" />
-      <workItem from="1730820119996" duration="6363000" />
+      <workItem from="1730820119996" duration="6915000" />
+      <workItem from="1731756128657" duration="8918000" />
+      <workItem from="1732005451671" duration="1000" />
+      <workItem from="1732364012592" duration="12953000" />
     </task>
     <task id="LOCAL-00001" summary="规划局">
       <created>1715348058764</created>
@@ -478,6 +511,14 @@
           </properties>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
+          <line>49</line>
+          <properties class="com.example.controller.AAFurinaLoginController" method="login">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
           <line>1</line>
@@ -485,7 +526,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/common/config/JwtInterceptor.java</url>
-          <line>39</line>
+          <line>38</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -500,18 +541,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
-          <line>66</line>
+          <line>69</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaLoginController.java</url>
-          <line>117</line>
+          <line>120</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaminioService.java</url>
-          <line>88</line>
+          <line>89</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaminioController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

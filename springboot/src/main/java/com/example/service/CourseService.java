@@ -40,6 +40,66 @@ public class CourseService {
         return rowsAffected > 0;
     }
 
+    //课程检查喵
+    public boolean checkCourse(Course course) {
+        if (course == null) {
+            return false;
+        }
+
+        if (course.getCoursename() == null || course.getCoursename().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getTeacher() == null || course.getTeacher().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getSemester() == null || course.getSemester().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getYear() == null || course.getYear().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getCredits() == null || course.getCredits().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getCoursedescription() == null || course.getCoursedescription().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getMaxstudent() == null || course.getMaxstudent().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getNowstudentNum() == null || course.getNowstudentNum().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getClassroom() == null || course.getClassroom().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getSchedule() == null || course.getSchedule().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getCoursestatus() == null || course.getCoursestatus().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getTeacherId() == null || course.getTeacherId().trim().isEmpty()) {
+            return false;
+        }
+
+        if (course.getIsdel() == null || course.getIsdel().trim().isEmpty()) {
+            return false;
+        }
+
+        return true;
+    }
     /**
      * 批量删除
      */

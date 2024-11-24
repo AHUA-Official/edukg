@@ -1,11 +1,14 @@
 package com.example.mapper;
 
 import com.example.entity.Bookcompnet;
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
 /**
  * 操作bookcompnet相关数据接口
  */
+@Mapper
 public interface BookcompnetMapper {
 
     /**

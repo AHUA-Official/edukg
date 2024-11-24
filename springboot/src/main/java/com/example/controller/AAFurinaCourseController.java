@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 */
 @RestController
 @RequestMapping("/course")
-public class CourseController {
+public class AAFurinaCourseController {
 
     @Resource
 	CourseService courseService;
@@ -207,17 +207,63 @@ public class CourseController {
 	 */
 	@PostMapping("/upload")
 	public Result upload(MultipartFile file) throws IOException {
+		// 1. 使用 ExcelUtil 读取上传的文件流，并将其转换为 Course 对象列表
 		List<Course> infoList = ExcelUtil.getReader(file.getInputStream()).readAll(Course.class);
+//  编写一个检查器   对 最大的student 数量进行限制  需要小于等于45  如果比这个大的  提前检查出来   扔掉  并把他放到失败列表里面返回
+//		{
+//			"code": "200",
+//				"msg": "成功",
+//				"data": null
+//		} 这个就是result的描述  把这个东西的fail列表放到data里面返回
+//    @TableId(type = IdType.AUTO)
+//    private Integer id;
+//	private String coursename;
+//	private String teacher;
+//	private String semester;
+//	private String year;
+//	private String credits;
+//	private String coursedescription;
+//	private String maxstudent;
+//	private String nowstudentNum;
+//	private String classroom;
+//	private String schedule;
+//	private String coursestatus;
+//	private String teacherId;
+//	private String isdel;
+		// 初始化成功和失败列表
+		List<Course> successList = new ArrayList<>();
+		List<Course> failList = new ArrayList<>();
+
 		if (!CollectionUtil.isEmpty(infoList)) {
 			for (Course info : infoList) {
 				try {
-					courseService.add(info);
+					// 检查 maxstudent 是否小于等于 45
+					int maxStudent = Integer.parseInt(info.getMaxstudent());
+					System.out.println();
+					if (maxStudent <= 45) {
+						courseService.add(info);
+						successList.add(info);
+					} else {
+						failList.add(info);
+					}
+				} catch (NumberFormatException e) {
+					// 处理 maxstudent 不是数字的情况
+					e.printStackTrace();
+					failList.add(info);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		}
-		return Result.success();
+
+		// 构建结果对象
+		Result result = new Result();
+		result.setCode("200");
+		result.setMsg("成功");
+		result.setData(failList); // 将失败列表放入 data 中
+
+		return result;
+	}
 	}
 
-}
+

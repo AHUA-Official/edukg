@@ -1,8 +1,10 @@
 package com.example.mapper;
 
 import com.example.entity.Acquireanswer;
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+@Mapper
 /**
  * 操作acquireanswer相关数据接口
  */
