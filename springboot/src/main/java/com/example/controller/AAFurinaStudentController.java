@@ -26,7 +26,7 @@ import java.util.Map;
 */
 @RestController
 @RequestMapping("/student")
-public class StudentController {
+public class AAFurinaStudentController {
 
     @Resource
     StudentService studentService;

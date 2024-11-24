@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.AAFurinaCSREFMapper">
+
+    <sql id="Base_Column_List">
+        id,student_id,course_id,username,name,phone,coursename
+    </sql>
+    <select id="selectAll" resultType="com.example.entity.AAFurinaCSREF">
+        select
+        <include refid="Base_Column_List" />
+        from course_studentREF
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="studentId != null"> and student_id = #{studentId}</if>
+            <if test="courseId != null"> and course_id like concat('%', #{courseId}, '%')</if>
+            <if test="username != null"> and username like concat('%', #{username}, '%')</if>
+            <if test="name != null"> and name like concat('%', #{name}, '%')</if>
+            <if test="phone != null"> and phone like concat('%', #{phone}, '%')</if>
+            <if test="coursename != null"> and coursename like concat('%', #{coursename}, '%')</if>
+        </where>
+        order by id desc
+    </select>
+    <insert id="insert" parameterType="com.example.entity.AAFurinaCSREF">
+        INSERT INTO course_studentREF (student_id, course_id, username, name, phone, coursename)
+        VALUES (#{studentId}, #{courseId}, #{username}, #{name}, #{phone}, #{coursename})
+    </insert>
+
+</mapper>
