@@ -128,6 +128,44 @@ public class AAFurinaCSREFController {
         IoUtil.close(out);
     }
 
+
+
+    @GetMapping("/exportmb")
+    public void exportmb(HttpServletResponse response) throws IOException {
+        AAFurinaCSREF CSREF = new AAFurinaCSREF();
+        CSREF.setStudentId(null);
+        CSREF.setCourseId(null);
+        CSREF.setUsername(null);
+        CSREF.setName(null);
+        CSREF.setPhone(null);
+        CSREF.setCoursename(null);
+
+        List<AAFurinaCSREF> all = courseStudentrefService.selectAll( CSREF);
+        System.out.println("@@@@@@@");
+        System.out.println(all);
+        List<Map<String, Object>> list = new ArrayList<>(all.size());
+
+            Map<String, Object> row = new LinkedHashMap<>();
+
+            row.put("学生ID", null);
+            row.put("课程ID", null);
+            row.put("学号", null);
+            row.put("姓名", null);
+            row.put("电话", null);
+            row.put("课程名", null);
+            list.add(row);
+
+
+        ExcelWriter writer = ExcelUtil.getWriter(true);
+        writer.write(list, true);
+        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8");
+        response.setHeader("Content-Disposition", "attachment;filename=courseStudentrefInfo.xlsx");
+        ServletOutputStream out = response.getOutputStream();
+        writer.flush(out, true);
+        writer.close();
+        IoUtil.close(out);
+    }
+
     @PostMapping("/import")
     public Result importData(@RequestParam("file") MultipartFile file) throws IOException {
         // 检查文件是否为空

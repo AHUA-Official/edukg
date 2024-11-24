@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.example.AAFurinaMinioTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.543 s <<< FAILURE! - in com.example.AAFurinaMinioTest
+test06  Time elapsed: 0.067 s  <<< ERROR!
+io.minio.errors.ErrorResponseException: Object does not exist
+
+test08  Time elapsed: 0.075 s  <<< ERROR!
+io.minio.errors.ErrorResponseException: The specified key does not exist.
+
