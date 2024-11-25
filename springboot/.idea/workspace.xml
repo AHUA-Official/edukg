@@ -7,10 +7,14 @@
     <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="minio合并1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaCSREFController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaCSREFController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaCSREFMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaCSREFMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaCSREFService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaCSREFService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaCSREFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaCSREFMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/AAFurinaCSREFMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/AAFurinaCSREFMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaCSREFService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaCSREFService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AAFurinaCSREFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AAFurinaCSREFMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
     </list>
@@ -126,8 +130,8 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="?" />
-      <command value="mvn package" />
       <command value="mvn clean" />
+      <command value="mvn package" />
       <command value="mvn   package" />
     </option>
   </component>
@@ -309,7 +313,7 @@
       <workItem from="1730820119996" duration="6915000" />
       <workItem from="1731756128657" duration="8918000" />
       <workItem from="1732005451671" duration="1000" />
-      <workItem from="1732364012592" duration="29142000" />
+      <workItem from="1732364012592" duration="32396000" />
     </task>
     <task id="LOCAL-00001" summary="规划局">
       <created>1715348058764</created>
@@ -543,5 +547,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springboot$SpringbootApplication.ic" NAME="SpringbootApplication Coverage Results" MODIFIED="1732465730393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

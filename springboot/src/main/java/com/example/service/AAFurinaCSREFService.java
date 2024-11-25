@@ -142,5 +142,9 @@ public class AAFurinaCSREFService {
         System.out.println(result);
         return result;
     }
+
+    public List<AAFurinaCSREF> selectbycourseid(Integer courseId) {
+        return courseStudentrefMapper.selectbycourseid(courseId);
+    }
 }
 

@@ -13,4 +13,6 @@ public interface AAFurinaCSREFMapper {
     List<AAFurinaCSREF> selectAll(AAFurinaCSREF csref);
 
     void insert(AAFurinaCSREF courseStudentref);
+
+    List<AAFurinaCSREF> selectbycourseid(Integer courseId);
 }

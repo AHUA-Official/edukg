@@ -10,7 +10,7 @@
     <select id="selectAll" resultType="com.example.entity.AAFurinaCSREF">
         select
         <include refid="Base_Column_List" />
-        from course_studentREF
+        from course_studentref
         <where>
             <if test="id != null"> and id = #{id}</if>
             <if test="studentId != null"> and student_id = #{studentId}</if>
@@ -23,8 +23,18 @@
         order by id desc
     </select>
     <insert id="insert" parameterType="com.example.entity.AAFurinaCSREF">
-        INSERT INTO course_studentREF (student_id, course_id, username, name, phone, coursename)
+        INSERT INTO course_studentref (student_id, course_id, username, name, phone, coursename)
         VALUES (#{studentId}, #{courseId}, #{username}, #{name}, #{phone}, #{coursename})
     </insert>
+    <!-- 查询特定课程ID的所有记录 -->
+    <select id="selectbycourseid" resultType="com.example.entity.AAFurinaCSREF">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM
+        course_studentref
+        WHERE
+        course_id = #{courseId}
+    </select>
+
 
 </mapper>

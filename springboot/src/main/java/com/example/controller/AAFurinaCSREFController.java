@@ -31,8 +31,21 @@ public class AAFurinaCSREFController {
     private AAFurinaCSREFService courseStudentrefService;
 
     @GetMapping("/selectAll")
-    public Result selectAll(AAFurinaCSREF courseStudentref) {
-        List<AAFurinaCSREF> list = courseStudentrefService.selectAll(courseStudentref);
+    public Result selectAll( @RequestParam(value = "courseId", required = false) Integer courseId ) {
+        System.out.println(courseId);
+        AAFurinaCSREF courseStudentref =new AAFurinaCSREF();
+        if (courseId != null) {
+            courseStudentref.setCourseId(1);
+            courseStudentref.setStudentId(null);
+            courseStudentref.setCoursename(null);
+            courseStudentref.setName(null);
+            courseStudentref.setPhone(null);
+        }
+
+
+
+        List<AAFurinaCSREF> list = courseStudentrefService.selectbycourseid(courseId);
+        System.out.println(list);
         return Result.success(list);
     }
     //导入一条数据   作为中间的Ref  需要做合规性的验证  传入的参数只有   "courseId": 28,
