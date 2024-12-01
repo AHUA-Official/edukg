@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2793ee4d-2830-4988-be92-71f6ef058c88" name="变更" comment="minio合并1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaCSREFController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AAFurinaCSREFController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaCSREFMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/AAFurinaCSREFMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaCSREFService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AAFurinaCSREFService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaCSREFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AAFurinaCSREFMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/controller/AAFurinaCSREFController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mapper/AAFurinaCSREFMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mapper/AAFurinaCSREFMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaCSREFService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/service/AAFurinaCSREFService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AAFurinaCSREFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/AAFurinaCSREFMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,18 +124,20 @@
     <option name="myCommands">
       <command value="?" />
       <command value="mvn clean" />
-      <command value="mvn package" />
       <command value="mvn   package" />
+      <command value="mvn package" />
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringbootApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,7 +221,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringbootApplication" />
       <method v="2">
@@ -235,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringbootApplication" />
         <item itemvalue="JUnit.AAFurinaCSREFTest.testAddCourseStudentref" />
         <item itemvalue="JUnit.AAFurinaCSREFTest" />
         <item itemvalue="JUnit.AAFurinaMinioTest.zlsql22" />
         <item itemvalue="JUnit.AAFurinaMinioTest.zlsql221" />
-        <item itemvalue="JUnit.AAFurinaMinioTest.testupdate" />
       </list>
     </recent_temporary>
   </component>
@@ -314,6 +309,9 @@
       <workItem from="1731756128657" duration="8918000" />
       <workItem from="1732005451671" duration="1000" />
       <workItem from="1732364012592" duration="32396000" />
+      <workItem from="1732614805480" duration="26000" />
+      <workItem from="1732705962730" duration="3014000" />
+      <workItem from="1732778688352" duration="2986000" />
     </task>
     <task id="LOCAL-00001" summary="规划局">
       <created>1715348058764</created>
